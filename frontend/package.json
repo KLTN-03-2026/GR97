@@ -1,0 +1,12 @@
+{
+  "name": "healthyai-frontend-root",
+  "private": true,
+  "scripts": {
+    "dev": "cd dat_lich_kham && npm run dev",
+    "dev:booking": "cd dat_lich_kham && npm run dev",
+    "dev:login": "cd dang_nhap && npm run dev",
+    "dev:register": "cd dang_ky && npm run dev",
+    "dev:metrics": "cd cap_nhat_chi_so_suc_khoe && npm run dev",
+    "install:all": "cd dat_lich_kham && npm install && cd ../dang_nhap && npm install && cd ../dang_ky && npm install && cd ../cap_nhat_chi_so_suc_khoe && npm install"
+  }
+}

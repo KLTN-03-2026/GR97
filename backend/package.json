@@ -1,0 +1,19 @@
+{
+  "name": "healthyai-backend-root",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "cd dat_lich_kham_benh && npm run dev",
+    "dev:login": "cd dang_nhap && npm run dev",
+    "dev:register": "cd dang_ky && npm run dev",
+    "dev:health": "cd cap_nhat_chi_so_suc_khoe && npm run dev",
+    "install:all": "(cd dat_lich_kham_benh && npm install) && (cd dang_nhap && npm install) && (cd dang_ky && npm install) && (cd cap_nhat_chi_so_suc_khoe && npm install)"
+  },
+  "env": {
+    "PORT": 5000,
+    "MONGODB_URI": "mongodb://127.0.0.1:27017/healthyai",
+    "JWT_SECRET": "replace_with_a_secure_secret",
+    "IN_MEMORY_AUTH": 0,
+    "FRONTEND_URL": "http://localhost:5173"
+  }
+}
