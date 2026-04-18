@@ -1,73 +1,76 @@
-# HealthyAI Fullstack
+# GR97 Health System
 
-Monorepo structure:
-- `frontend`: React + Vite + Framer Motion for multi-page UI with smooth transitions.
-- `backend`: Node.js + Express + MongoDB + OpenAI for API and AI customer support.
-- `admin`: reserved folder for future standalone admin app.
+Welcome to the GR97 Health System project! This project is designed to provide a comprehensive health management solution with various functionalities for users, doctors, and administrators.
 
-Backend folder layout:
-- `backend/config`
-- `backend/controllers`
-- `backend/middlewares`
-- `backend/models`
-- `backend/routes`
-- `backend/server.js`
+## Project Structure
 
-## 1) Requirements
+The project is organized into several key directories:
 
-- Node.js 18+
-- MongoDB (local or Atlas)
+- **backend/**: Contains the server-side code, including configuration, controllers, models, routes, services, middlewares, and utilities.
+- **frontend/**: Contains the client-side code built with React, including components, pages, and styles.
+- **admin/**: Contains the admin panel frontend code.
+- **doctor/**: Contains the doctor panel frontend code.
+- **features/**: Contains distinct functionalities, each organized into its own folder for better maintainability.
 
-## 2) Environment variables
+## Functionalities
 
-### Backend
+The GR97 Health System includes the following functionalities:
 
-Create `backend/.env` from `backend/.env.example`.
+1. **Authentication**: User login and registration.
+2. **Appointments**: Scheduling and managing appointments.
+3. **Chat**: Real-time chat functionality between users and doctors.
+4. **Doctors**: Viewing and managing doctor profiles.
+5. **Admin Dashboard**: Admin functionalities for managing users and doctors.
+6. **Payments**: Handling payment processing for appointments and services.
+7. **Medical Records**: Managing and viewing medical records.
+8. **Video Consultation**: Enabling video consultations between users and doctors.
 
-Required keys:
-- `MONGODB_URI`
-- `JWT_SECRET`
-- `OPENAI_API_KEY` (optional, fallback AI reply is used if empty)
+## Getting Started
 
-### Frontend
+To get started with the project, follow these steps:
 
-Create `frontend/.env` from `frontend/.env.example`.
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   ```
 
-## 3) Run backend
+2. Navigate to the project directory:
+   ```
+   cd GR97-health-system
+   ```
 
-```bash
-cd backend
-npm install
-npm run dev
-```
+3. Install dependencies for the backend:
+   ```
+   cd backend
+   npm install
+   ```
 
-## 4) Run frontend
+4. Install dependencies for the frontend:
+   ```
+   cd ../frontend
+   npm install
+   ```
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
+5. Start the backend server:
+   ```
+   cd ../backend
+   node server.js
+   ```
 
-Default URLs:
-- Frontend: `http://localhost:5173`
-- Backend: `http://localhost:5000`
+6. Start the frontend application:
+   ```
+   cd ../frontend
+   npm run dev
+   ```
 
-## Demo accounts
+## Documentation
 
-- Customer: register from `/register`
-- Admin (seeded):
-  - Email: `admin@booking.com`
-  - Password: `12345sau`
+For more detailed information about the architecture and design decisions, please refer to the [architecture documentation](docs/architecture.md).
 
-## Main pages mapped from Figma
+## Contributing
 
-- `/login`: authentication landing
-- `/register`: membership registration
-- `/dashboard`: patient dashboard
-- `/doctors`: doctor booking with QR payment modal
-- `/diagnosis`: AI diagnosis chat workspace
-- `/records`: electronic medical records
-- `/admin/dashboard`: admin overview
-- `/admin/doctors`: doctor management list
-- `/admin/doctors/:id`: doctor profile detail
+Contributions are welcome! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
