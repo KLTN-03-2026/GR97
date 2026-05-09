@@ -1,0 +1,34 @@
+{
+  "name": "healthyai-monorepo",
+  "version": "1.0.0",
+  "description": "HealthyAI Fullstack Monorepo",
+  "scripts": {
+    "install:all": "npm run install:backend && npm run install:frontend && npm run install:admin && npm run install:doctor",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "install:admin": "cd admin && npm install",
+    "install:doctor": "cd doctor && npm install",
+    "build:all": "npm run build:frontend && npm run build:admin && npm run build:doctor",
+    "build:frontend": "cd frontend && npm run build",
+    "build:admin": "cd admin && npm run build",
+    "build:doctor": "cd doctor && npm run build",
+    "start:all": "npm run start:backend & npm run start:frontend & npm run start:admin & npm run start:doctor",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm run dev",
+    "start:admin": "cd admin && npm run dev",
+    "start:doctor": "cd doctor && npm run dev",
+    "test:all": "npm run test:backend",
+    "test:backend": "cd backend && npm test",
+    "lint:all": "npm run lint:backend && npm run lint:frontend && npm run lint:admin && npm run lint:doctor",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint:admin": "cd admin && npm run lint",
+    "lint:doctor": "cd doctor && npm run lint"
+  },
+  "workspaces": [
+    "backend",
+    "frontend",
+    "admin",
+    "doctor"
+  ]
+}
